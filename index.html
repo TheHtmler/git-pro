@@ -9,30 +9,31 @@
 </head>
 
 <body>
-    <h1>抓紧时间学习 :)</h1>
+    <h1>抓紧时间学习 :) :)</h1>
     <button>change</button>
 
-<script>
-    var myBtn = document.querySelector('button');
-    var myHeader = document.querySelector('h1');
+    <script>
+        var myBtn = document.querySelector('button');
+        var myHeader = document.querySelector('h1');
 
-    function setChange(){
-        var myChange = prompt('come on');
-        localStorage.setItem('change', myChange);
-        myHeader.textContent = 'progress of' + myChange;
-    }
+        function setChange() {
+            var myChange = prompt('come on');
+            localStorage.setItem('change', myChange);
+            myHeader.textContent = 'progress of' + myChange;
+        }
 
-    if(!localStorage.getItem('change')){
-        setChange();
-    }else{
-        var stroedChange = localStorage.getItem('change');
-        myHeader.textContent = 'progress of  ' + stroedChange;
-    }
+        if (!localStorage.getItem('change')) {
+            setChange();
+        } else {
+            var stroedChange = localStorage.getItem('change');
+            myHeader.textContent = 'progress of  ' + stroedChange;
+        }
 
-    myBtn.onclick = function(){
-        setChange();
-    }
-    myBtn
-</script>
+        myBtn.onclick = function() {
+            setChange();
+        }
+        myBtn
+    </script>
 </body>
+
 </html>
