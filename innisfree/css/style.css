@@ -44,7 +44,7 @@ li {
 }
 .bg {
   background: url(../imgs/bg.jpg) no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .bg2 {
   background: url(../imgs/bg2.jpg) no-repeat;
@@ -291,5 +291,23 @@ li {
   }
   100% {
     transform: scale(1);
+  }
+}
+@media screen and (max-width: 320px) {
+  .letter {
+    margin-top: 10%;
+    width: 60%;
+  }
+  .text-con {
+    width: 62%;
+    color: #8b3931;
+    font-size: 12px;
+  }
+  .text-top {
+    top: 10%;
+  }
+  .text-bottom {
+    display: none;
+    top: 57%;
   }
 }
