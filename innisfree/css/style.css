@@ -43,7 +43,7 @@ li {
   height: 100% !important;
 }
 .bg {
-  background: url(../imgs/bg.jpg) no-repeat;
+  background: url(../imgs/bg.jpg) no-repeat center;
   background-size: cover;
 }
 .bg2 {
@@ -149,7 +149,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  padding-top: 50px;
+  padding-top: 20px;
   width: 60%;
 }
 .main3 .btns {
