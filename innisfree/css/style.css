@@ -44,7 +44,7 @@ li {
 }
 .bg {
   background: url(../imgs/bg.jpg) no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .bg2 {
   background: url(../imgs/bg2.jpg) no-repeat;
@@ -295,7 +295,6 @@ li {
 }
 @media screen and (max-width: 320px) {
   .letter {
-    margin-top: 10%;
     width: 60%;
   }
   .text-con {
