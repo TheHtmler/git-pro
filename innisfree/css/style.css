@@ -149,7 +149,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  padding-top: 30px;
+  padding-top: 50px;
   width: 60%;
 }
 .main3 .btns {
@@ -294,8 +294,7 @@ li {
 }
 @media screen and (max-width: 320px) {
   .text-con {
-    width: 62%;
-    color: #333;
+    width: 70%;
     font-size: 12px;
   }
   .text-top {
@@ -306,7 +305,7 @@ li {
     top: 57%;
   }
   .main3 {
-    padding-top: 40px;
+    padding-top: 50px;
   }
   @keyframes timeAddress {
     0% {
