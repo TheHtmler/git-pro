@@ -293,12 +293,9 @@ li {
   }
 }
 @media screen and (max-width: 320px) {
-  .letter {
-    width: 60%;
-  }
   .text-con {
     width: 62%;
-    color: #8b3931;
+    color: #333;
     font-size: 12px;
   }
   .text-top {
