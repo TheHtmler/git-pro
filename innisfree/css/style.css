@@ -171,8 +171,6 @@ li {
 }
 .min4 .logo3 {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: none;
   width: 150px;
   -webkit-animation: lastLogo 1s linear;
@@ -182,20 +180,24 @@ li {
   0% {
     opacity: 0;
     top: 0;
+    left: 50%;
   }
   60% {
     opacity: 1;
     top: 15%;
+    left: 50%;
     transform: translateX(-50%) scale(1);
   }
   80% {
     opacity: 1;
     top: 15%;
+    left: 50%;
     transform: translateX(-50%) scale(0.7);
   }
   100% {
     opacity: 1;
     top: 15%;
+    left: 50%;
     transform: translateX(-50%) scale(1);
   }
 }
