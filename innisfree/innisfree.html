@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>innisfree</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="swiper-container" id="introduce">
+    <audio id='audio' src='./mp3.mp3' loop></audio>
+    <button id='status' onclick='triggerBgMusic()'><img src="./imgs/play.png" alt=""></button>
+    <ul class="introduce-box-ul swiper-wrapper">
+      <li class="bg swiper-slide ">
+        <div class="letter-wrapper">
+          <img src="./imgs/logo1.png" alt="" class="logo1">
+          <img src="./imgs/letter.png" alt="" class="letter">
+        </div>
+        <i class="next"></i>
+      </li>
+      <li class="bg swiper-slide">
+        <img src="./imgs/logo2.png" class="text-logo" />
+        <div class="main2">
+          <img src="./imgs/letter.png" alt="" class="envolop rotate">
+          <div class="text-wrapper">
+            <!-- <img src="./imgs/writing-paper.png" alt="" class="envolop2"> -->
+            <div class="text-con text-top">
+            </div>
+            <div class="text-con text-bottom">
+            </div>
+          </div>
+        </div>
+        <i class="next"></i>
+      </li>
+      <li class="bg2 swiper-slide">
+        <img src="./imgs/logo2.png" class="text-logo" />
+        <div class="main3 main-content1">
+          <img src="./imgs/questions1.png" alt="">
+          <div class="btns">
+            <div class="yes">A.是</div>
+            <div class="no">B.否</div>
+          </div>
+        </div>
+        <i class="next"></i>
+      </li>
+      <li class="bg2 swiper-slide">
+        <div class="main3 main-content2">
+          <img src="./imgs/questions2.png" alt="">
+          <div class="btns">
+            <div class="yes">A.是</div>
+            <div class="no">B.否</div>
+          </div>
+        </div>
+        <i class="next"></i>
+      </li>
+      <li class="bg2 swiper-slide">
+        <div class="main3 main-content3">
+          <img src="./imgs/questions3.png" alt="">
+          <div class="btns">
+            <div class="yes">A.是</div>
+            <div class="no">B.否</div>
+          </div>
+        </div>
+        <i class="next"></i>
+      </li>
+      <li class="bg swiper-slide">
+         <div class="min4">
+           <img src="./imgs/logo3.png" alt="" class="logo3">
+           <img src="./imgs/title.png" alt="" class="title">
+           <img src="./imgs/time.png" alt="" class="time">
+         </div>
+      </li>
+    </ul>
+  </div>
+</body>
+<script src="js/swiper/swiper.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/typeWriter.js"></script>
+<script src="js/play.js"></script>
+<script>
+  var timeTypeText1,timeTypeText2;
+  var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        onSlideChangeStart: function(mySwiper) {
+          var liIndex = mySwiper.activeIndex
+          if(liIndex == 0){
+            $('.logo1, .letter').hide(0);
+          }
+          if(liIndex == 1) {
+            $('.main2 .envolop').removeClass('rotated').addClass('rotate')
+            $('.text-wrapper').hide(0)
+            $(".main2 .text-top, .main2 .text-bottom").hide(0)
+            clearTimeout(timeTypeText1)
+            clearTimeout(timeTypeText2)
+          }
+          if(liIndex == 2) {
+            $('.main-content1').hide(0)
+          }
+          if(liIndex == 3) {
+            $('.main-content2').hide(0)
+          }
+          if(liIndex == 4) {
+            $('.main-content3').hide(0)
+          }
+          if(liIndex == 5){
+            $('.logo3, .title, .time').hide(0);
+          }
+        },
+        onSlideChangeEnd: function(mySwiper){
+          var liIndex = mySwiper.activeIndex;
+          if(liIndex == 0){
+            $('.logo1').fadeIn(500);
+            setTimeout(function(){
+                $('.letter').fadeIn(500);
+            },1000)
+          }
+          if(liIndex == 1) {
+              $('.main2 .envolop').removeClass('rotate').addClass('rotated');
+              setTimeout(function(){
+                $('.text-wrapper').fadeIn(500);
+              },100)
+              timeTypeText1 = setTimeout(function(){
+                $(".main2 .text-top").html(
+                  `亲爱的<br/>`+
+                  `收到这封信是不是有一点小惊讶?`
+                ).show().typewriter(150);
+              },1500)
+              timeTypeText2 = setTimeout(function(){
+                $(".main2 .text-bottom").html(
+                  `其实，<br/>`+
+                  `我们已经观察你很久了，<br/>`+
+                  `发现你身边有一些危害在悄悄潜伏着<br/>`+
+                  `... ... `
+                ).show().typewriter(150);
+              },5000)
+          }
+          if(liIndex == 2){
+            $('.main-content1').fadeIn(500);
+          }
+          if(liIndex == 3){
+            $('.main-content2').fadeIn(500);
+          }
+          if(liIndex == 4){
+            $('.main-content3').fadeIn(500);
+          }
+          if(liIndex == 5){
+            $('.logo3').fadeIn(500);
+            setTimeout(function(){
+                $('.title').fadeIn(500);
+            },500)
+            setTimeout(function(){
+                $('.time').fadeIn(500);
+            },1000)
+          }
+        }
+      });
+</script>
+<script src="js/index.js"></script>
+</html>
