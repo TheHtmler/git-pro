@@ -14,7 +14,7 @@
     <ul class="introduce-box-ul swiper-wrapper">
       <li class="bg swiper-slide ">
         <div class="letter-wrapper">
-          <img src="./imgs/logo1.png" alt="" class="logo1">
+          <div class="logo-wra"><img src="./imgs/logo1.png" alt="" class="logo1"></div>
           <img src="./imgs/letter.png" alt="" class="letter">
         </div>
         <i class="next"></i>
@@ -66,11 +66,17 @@
         </div>
         <i class="next"></i>
       </li>
-      <li class="bg swiper-slide">
-         <div class="min4">
+      <li class="bg4 swiper-slide">
+         <div class="main4">
+           <img src="./imgs/bg3.jpg" alt="" class="bg3">
            <img src="./imgs/logo3.png" alt="" class="logo3">
-           <img src="./imgs/title.png" alt="" class="title">
+           <img src="./imgs/text1.png" alt="" class="text1">
+           <img src="./imgs/text2.png" alt="" class="text2">
+           <img src="./imgs/text3.png" alt="" class="text3">
+           <img src="./imgs/line.png" alt="" class="line">
            <img src="./imgs/time.png" alt="" class="time">
+           <img src="./imgs/address.png" alt="" class="address">
+           <img src="./imgs/password.png" alt="" class="password">
          </div>
       </li>
     </ul>
@@ -80,6 +86,7 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/typeWriter.js"></script>
 <script src="js/play.js"></script>
+<script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js "></script>
 <script>
   var timeTypeText1,timeTypeText2;
   var swiper = new Swiper('.swiper-container', {
@@ -87,7 +94,7 @@
         onSlideChangeStart: function(mySwiper) {
           var liIndex = mySwiper.activeIndex
           if(liIndex == 0){
-            $('.logo1, .letter').hide(0);
+            $('.logo-wra, .letter').hide(0);
           }
           if(liIndex == 1) {
             $('.main2 .envolop').removeClass('rotated').addClass('rotate')
@@ -97,25 +104,25 @@
             clearTimeout(timeTypeText2)
           }
           if(liIndex == 2) {
-            $('.main-content1').hide(0)
+            $('.main-content1 img, .main-content1 .btns').hide(0)
           }
           if(liIndex == 3) {
-            $('.main-content2').hide(0)
+            $('.main-content2 img, .main-content2 .btns').hide(0)
           }
           if(liIndex == 4) {
-            $('.main-content3').hide(0)
+            $('.main-content3 img, .main-content3 .btns').hide(0)
           }
           if(liIndex == 5){
-            $('.logo3, .title, .time').hide(0);
+            $('.bg3, .logo3, .text1, .text2, text3, .line, .address, .time, .password ').hide(0);
           }
         },
         onSlideChangeEnd: function(mySwiper){
           var liIndex = mySwiper.activeIndex;
           if(liIndex == 0){
-            $('.logo1').fadeIn(500);
+            $('.logo-wra').fadeIn(500);
             setTimeout(function(){
                 $('.letter').fadeIn(500);
-            },1000)
+            },1500)
           }
           if(liIndex == 1) {
               $('.main2 .envolop').removeClass('rotate').addClass('rotated');
@@ -138,22 +145,49 @@
               },5000)
           }
           if(liIndex == 2){
-            $('.main-content1').fadeIn(500);
+            $('.main-content1 img').fadeIn(500);
+            setTimeout(function(){
+              $('.main-content1 .btns').fadeIn(500);
+            },500)
           }
           if(liIndex == 3){
-            $('.main-content2').fadeIn(500);
+            $('.main-content2 img').fadeIn(500);
+            setTimeout(function(){
+              $('.main-content2 .btns').fadeIn(500);
+            },500)
           }
           if(liIndex == 4){
-            $('.main-content3').fadeIn(500);
+            $('.main-content3 img').fadeIn(500);
+            setTimeout(function(){
+              $('.main-content3 .btns').fadeIn(500);
+            },500)
           }
           if(liIndex == 5){
-            $('.logo3').fadeIn(500);
+            $('.bg3').fadeIn(2000);
             setTimeout(function(){
-                $('.title').fadeIn(500);
+                $('.logo3').fadeIn(500);
             },500)
             setTimeout(function(){
-                $('.time').fadeIn(500);
+                $('.text1').fadeIn(500);
             },1000)
+            setTimeout(function(){
+                $('.text2').fadeIn(500);
+            },1500)
+            setTimeout(function(){
+                $('.text3').fadeIn(500);
+            },2000)
+            setTimeout(function(){
+                $('.line').fadeIn(500);
+            },3000)
+            setTimeout(function(){
+                $('.time').fadeIn(500);
+            },3000)
+            setTimeout(function(){
+                $('.address').fadeIn(500);
+            },3500)
+            setTimeout(function(){
+                $('.password').fadeIn(500);
+            },4000)
           }
         }
       });

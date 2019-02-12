@@ -50,8 +50,14 @@ li {
   background: url(../imgs/bg2.jpg) no-repeat center;
   background-size: cover;
 }
-.logo1 {
+.bg4 {
+  background: url(../imgs/bg4.jpg) no-repeat center;
+  background-size: cover;
+}
+.logo-wra {
   display: none;
+}
+.logo1 {
   width: 95px;
   -webkit-animation: firstLogo 1s linear;
   animation-fill-mode: forwards;
@@ -79,8 +85,29 @@ li {
 }
 .letter {
   display: none;
-  margin-top: 20%;
-  width: 80%;
+  width: 70%;
+  -webkit-animation: letterWra 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes letterWra {
+  0% {
+    margin-top: 0;
+    opacity: 0;
+  }
+  60% {
+    margin-top: 20%;
+    opacity: 1;
+  }
+  80% {
+    margin-top: 20%;
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  100% {
+    margin-top: 20%;
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .text-logo {
   position: absolute;
@@ -131,7 +158,7 @@ li {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 65%;
   color: #8b3931;
   font-size: 12px;
 }
@@ -148,30 +175,46 @@ li {
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
   width: 60%;
 }
+.main3 img {
+  display: none;
+}
 .main3 .btns {
+  display: none;
   margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
+  overflow: hidden;
 }
 .main3 .btns div {
   color: #8b3931;
   font-size: 12px;
   padding: 5px 10px;
 }
+.main3 .btns div.yes {
+  float: left;
+}
+.main3 .btns div.no {
+  float: right;
+}
 .main3 .btns div.active {
   background-color: #f6e4e2;
   border-radius: 5px;
 }
-.min4 {
+.main4 {
   width: 100%;
 }
-.min4 .logo3 {
+.main4 .bg3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+  width: 72%;
+}
+.main4 .logo3 {
   position: absolute;
   display: none;
-  width: 150px;
+  width: 42%;
   -webkit-animation: lastLogo 1s linear;
   animation-fill-mode: forwards;
 }
@@ -183,59 +226,156 @@ li {
   }
   60% {
     opacity: 1;
-    top: 15%;
+    top: 22%;
     left: 50%;
     transform: translateX(-50%) scale(1);
   }
   80% {
     opacity: 1;
-    top: 15%;
+    top: 22%;
     left: 50%;
     transform: translateX(-50%) scale(0.7);
   }
   100% {
     opacity: 1;
-    top: 15%;
+    top: 22%;
     left: 50%;
     transform: translateX(-50%) scale(1);
   }
 }
-.min4 .title {
+.main4 .text1 {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  width: 70%;
-  -webkit-animation: titles 1s linear;
+  width: 42%;
+  -webkit-animation: titleText1 1s linear;
   animation-fill-mode: forwards;
 }
-@keyframes titles {
+@keyframes titleText1 {
   0% {
     opacity: 0;
     top: 0;
   }
   60% {
     opacity: 1;
-    top: 45%;
+    top: 35%;
     transform: translate(-50%, -50%) scale(1);
   }
   80% {
     opacity: 1;
-    top: 45%;
+    top: 35%;
     transform: translate(-50%, -50%) scale(0.7);
   }
   100% {
     opacity: 1;
-    top: 45%;
+    top: 35%;
     transform: translate(-50%, -50%) scale(1);
   }
 }
-.min4 .time {
+.main4 .text2 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 42%;
+  -webkit-animation: titleText2 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes titleText2 {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  60% {
+    opacity: 1;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  80% {
+    opacity: 1;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.main4 .text3 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 50%;
+  -webkit-animation: titleText3 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes titleText3 {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  60% {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  80% {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.main4 .line {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+.main4 .time {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 30%;
+  width: 50%;
+  -webkit-animation: timeTime 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes timeTime {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  60% {
+    opacity: 1;
+    bottom: 24%;
+    transform: translateX(-50%) scale(1);
+  }
+  80% {
+    opacity: 1;
+    bottom: 24%;
+    transform: translateX(-50%) scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    bottom: 24%;
+    transform: translateX(-50%) scale(1);
+  }
+}
+.main4 .address {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 50%;
   -webkit-animation: timeAddress 1s linear;
   animation-fill-mode: forwards;
 }
@@ -246,17 +386,47 @@ li {
   }
   60% {
     opacity: 1;
-    bottom: 15%;
+    bottom: 21%;
     transform: translateX(-50%) scale(1);
   }
   80% {
     opacity: 1;
-    bottom: 15%;
+    bottom: 21%;
     transform: translateX(-50%) scale(0.7);
   }
   100% {
     opacity: 1;
-    bottom: 15%;
+    bottom: 21%;
+    transform: translateX(-50%) scale(1);
+  }
+}
+.main4 .password {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 50%;
+  -webkit-animation: timePassword 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes timePassword {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  60% {
+    opacity: 1;
+    bottom: 18%;
+    transform: translateX(-50%) scale(1);
+  }
+  80% {
+    opacity: 1;
+    bottom: 18%;
+    transform: translateX(-50%) scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    bottom: 18%;
     transform: translateX(-50%) scale(1);
   }
 }
@@ -264,8 +434,8 @@ li {
   position: absolute;
   top: 10px;
   left: 15px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   z-index: 1;
 }
 /* 下一页箭头 */
@@ -289,21 +459,5 @@ li {
   }
   100% {
     transform: scale(1);
-  }
-}
-@media screen and (max-width: 320px) {
-  .text-con {
-    width: 70%;
-    font-size: 12px;
-  }
-  .text-top {
-    top: 10%;
-  }
-  .text-bottom {
-    display: none;
-    top: 57%;
-  }
-  .main3 {
-    padding-top: 50px;
   }
 }
