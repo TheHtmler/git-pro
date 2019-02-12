@@ -47,7 +47,7 @@ li {
   background-size: cover;
 }
 .bg2 {
-  background: url(../imgs/bg2.jpg) no-repeat;
+  background: url(../imgs/bg2.jpg) no-repeat center;
   background-size: cover;
 }
 .logo1 {
