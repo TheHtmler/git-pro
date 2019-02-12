@@ -149,7 +149,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  padding-top: 20px;
+  padding-top: 30px;
   width: 60%;
 }
 .main3 .btns {
@@ -233,7 +233,6 @@ li {
 }
 .min4 .time {
   position: absolute;
-  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   display: none;
@@ -308,5 +307,29 @@ li {
   .text-bottom {
     display: none;
     top: 57%;
+  }
+  .main3 {
+    padding-top: 40px;
+  }
+  @keyframes timeAddress {
+    0% {
+      opacity: 0;
+      bottom: 0;
+    }
+    60% {
+      opacity: 1;
+      bottom: 15%;
+      transform: translateX(-50%) scale(1);
+    }
+    80% {
+      opacity: 1;
+      bottom: 15%;
+      transform: translateX(-50%) scale(0.7);
+    }
+    100% {
+      opacity: 1;
+      bottom: 15%;
+      transform: translateX(-50%) scale(1);
+    }
   }
 }
