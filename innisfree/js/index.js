@@ -58,3 +58,107 @@ function getShare(){
 }
 getShare()
 
+
+
+// -------------swiper动画-------------
+var timeTypeText1,timeTypeText2;
+  var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        onSlideChangeStart: function(mySwiper) {
+          var liIndex = mySwiper.activeIndex
+          if(liIndex == 0){
+            $('.logo-wra, .letter').hide(0);
+          }
+          if(liIndex == 1) {
+            $('.main2 .envolop').removeClass('rotated').addClass('rotate')
+            $('.text-wrapper').hide(0)
+            $(".main2 .text-top, .main2 .text-bottom").hide(0)
+            clearTimeout(timeTypeText1)
+            clearTimeout(timeTypeText2)
+          }
+          if(liIndex == 2) {
+            $('.main-content1 img, .main-content1 .btns').hide(0)
+          }
+          if(liIndex == 3) {
+            $('.main-content2 img, .main-content2 .btns').hide(0)
+          }
+          if(liIndex == 4) {
+            $('.main-content3 img, .main-content3 .btns').hide(0)
+          }
+          if(liIndex == 5){
+            $('.bg3, .logo3, .text1, .text3, .line, .address, .time, .password ').hide(0);
+          }
+        },
+        onSlideChangeEnd: function(mySwiper){
+          var liIndex = mySwiper.activeIndex;
+          if(liIndex == 0){
+            $('.logo-wra').fadeIn(500);
+            setTimeout(function(){
+                $('.letter').fadeIn(500);
+            },1500)
+          }
+          if(liIndex == 1) {
+              $('.main2 .envolop').removeClass('rotate').addClass('rotated');
+              setTimeout(function(){
+                $('.text-wrapper').fadeIn(500);
+              },100)
+              timeTypeText1 = setTimeout(function(){
+                $(".main2 .text-top").html(
+                  `亲爱的<br/>`+
+                  `收到这封信是不是有一点小惊讶?`
+                ).show().typewriter(150);
+              },1500)
+              timeTypeText2 = setTimeout(function(){
+                $(".main2 .text-bottom").html(
+                  `其实，<br/>`+
+                  `我们已经观察你很久了，<br/>`+
+                  `发现你身边有一些危害在悄悄潜伏着<br/>`+
+                  `... ... `
+                ).show().typewriter(150);
+              },5000)
+          }
+          if(liIndex == 2){
+            $('.main-content1 img').fadeIn(500);
+            setTimeout(function(){
+              $('.main-content1 .btns').fadeIn(500);
+            },500)
+          }
+          if(liIndex == 3){
+            $('.main-content2 img').fadeIn(500);
+            setTimeout(function(){
+              $('.main-content2 .btns').fadeIn(500);
+            },500)
+          }
+          if(liIndex == 4){
+            $('.main-content3 img').fadeIn(500);
+            setTimeout(function(){
+              $('.main-content3 .btns').fadeIn(500);
+            },500)
+          }
+          if(liIndex == 5){
+            $('.bg3').fadeIn(2000);
+            setTimeout(function(){
+                $('.logo3').fadeIn(500);
+            },1000)
+            setTimeout(function(){
+                $('.text1').fadeIn(500);
+            },2000)
+            setTimeout(function(){
+                $('.text3').fadeIn(500);
+            },3500)
+            setTimeout(function(){
+                $('.line').fadeIn(500);
+            },3500)
+            setTimeout(function(){
+                $('.time').fadeIn(500);
+            },5500)
+            setTimeout(function(){
+                $('.address').fadeIn(500);
+            },6500)
+            setTimeout(function(){
+                $('.password').fadeIn(500);
+            },7500)
+          }
+        }
+      });
+
