@@ -274,36 +274,6 @@ li {
     transform: translate(-50%, -50%) scale(1);
   }
 }
-.main4 .text2 {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  width: 42%;
-  -webkit-animation: titleText2 1s linear;
-  animation-fill-mode: forwards;
-}
-@keyframes titleText2 {
-  0% {
-    opacity: 0;
-    top: 0;
-  }
-  60% {
-    opacity: 1;
-    top: 40%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  80% {
-    opacity: 1;
-    top: 40%;
-    transform: translate(-50%, -50%) scale(0.7);
-  }
-  100% {
-    opacity: 1;
-    top: 40%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
 .main4 .text3 {
   position: absolute;
   display: none;

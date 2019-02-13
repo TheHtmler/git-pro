@@ -71,7 +71,6 @@
            <img src="./imgs/bg3.jpg" alt="" class="bg3">
            <img src="./imgs/logo3.png" alt="" class="logo3">
            <img src="./imgs/text1.png" alt="" class="text1">
-           <img src="./imgs/text2.png" alt="" class="text2">
            <img src="./imgs/text3.png" alt="" class="text3">
            <img src="./imgs/line.png" alt="" class="line">
            <img src="./imgs/time.png" alt="" class="time">
@@ -113,7 +112,7 @@
             $('.main-content3 img, .main-content3 .btns').hide(0)
           }
           if(liIndex == 5){
-            $('.bg3, .logo3, .text1, .text2, .text3, .line, .address, .time, .password ').hide(0);
+            $('.bg3, .logo3, .text1, .text3, .line, .address, .time, .password ').hide(0);
           }
         },
         onSlideChangeEnd: function(mySwiper){
@@ -171,23 +170,20 @@
                 $('.text1').fadeIn(500);
             },2000)
             setTimeout(function(){
-                $('.text2').fadeIn(500);
-            },3000)
-            setTimeout(function(){
                 $('.text3').fadeIn(500);
-            },4500)
+            },3500)
             setTimeout(function(){
                 $('.line').fadeIn(500);
-            },4500)
+            },3500)
             setTimeout(function(){
                 $('.time').fadeIn(500);
-            },6500)
+            },5500)
             setTimeout(function(){
                 $('.address').fadeIn(500);
-            },7500)
+            },6500)
             setTimeout(function(){
                 $('.password').fadeIn(500);
-            },8500)
+            },7500)
           }
         }
       });
