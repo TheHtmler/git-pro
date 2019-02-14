@@ -66,7 +66,7 @@
       </li>
       <li class="bg4 swiper-slide">
          <div class="main4">
-           <img src="./imgs/bg3.jpg" alt="" class="bg3">
+           <!-- <img src="./imgs/bg3.jpg" alt="" class="bg3"> -->
            <img src="./imgs/logo3.png" alt="" class="logo3">
            <img src="./imgs/text1.png" alt="" class="text1">
            <img src="./imgs/text3.png" alt="" class="text3">
@@ -112,7 +112,7 @@
             $('.main-content3 img, .main-content3 .btns').hide(0)
           }
           if(liIndex == 5){
-            $('.bg3, .logo3, .text1, .text3, .line, .address, .time, .password ').hide(0);
+            $('.logo3, .text1, .text3, .line, .address, .time, .password ').hide(0);
           }
         },
         onSlideChangeEnd: function(mySwiper){
@@ -162,28 +162,25 @@
             },500)
           }
           if(liIndex == 5){
-            $('.bg3').fadeIn(2000);
-            setTimeout(function(){
-                $('.logo3').fadeIn(500);
-            },1000)
+            $('.logo3').fadeIn(500);
             setTimeout(function(){
                 $('.text1').fadeIn(500);
-            },2000)
+            },1500)
             setTimeout(function(){
                 $('.text3').fadeIn(500);
-            },3500)
+            },3000)
             setTimeout(function(){
                 $('.line').fadeIn(500);
-            },3500)
+            },300)
             setTimeout(function(){
                 $('.time').fadeIn(500);
-            },5500)
+            },4000)
             setTimeout(function(){
                 $('.address').fadeIn(500);
-            },6500)
+            },5000)
             setTimeout(function(){
                 $('.password').fadeIn(500);
-            },7500)
+            },6000)
           }
         }
       });

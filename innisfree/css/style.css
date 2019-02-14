@@ -43,15 +43,15 @@ li {
   height: 100% !important;
 }
 .bg {
-  background: url(../imgs/bg.jpg) no-repeat center;
+  background: url(../imgs/bg.gif) no-repeat center;
   background-size: cover;
 }
 .bg2 {
-  background: url(../imgs/bg2.jpg) no-repeat center;
+  background: url(../imgs/bg2.gif) no-repeat center;
   background-size: cover;
 }
 .bg4 {
-  background: url(../imgs/bg4.jpg) no-repeat center;
+  background: url(../imgs/bg4.gif) no-repeat center;
   background-size: cover;
 }
 .logo-wra {
