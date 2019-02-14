@@ -5,6 +5,7 @@ $(function(){
   },1000)
   $('.main3 .btns div').click(function(){
     $(this).addClass('active').siblings().removeClass('active')
+    swiper.slideNext();
   })
 })
 
