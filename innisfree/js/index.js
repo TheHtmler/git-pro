@@ -58,9 +58,3 @@ function getShare(){
    })
 }
 getShare()
-
-
-
-
-
-
