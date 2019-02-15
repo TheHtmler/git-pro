@@ -308,7 +308,7 @@ li {
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 70%;
+  width: 65%;
   -webkit-animation: timeTime 1s linear;
   animation-fill-mode: forwards;
 }
@@ -338,7 +338,7 @@ li {
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 70%;
+  width: 65%;
   -webkit-animation: timeAddress 1s linear;
   animation-fill-mode: forwards;
 }
@@ -368,7 +368,7 @@ li {
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 70%;
+  width: 65%;
   -webkit-animation: timePassword 1s linear;
   animation-fill-mode: forwards;
 }
