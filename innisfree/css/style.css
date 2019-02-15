@@ -276,19 +276,19 @@ li {
   }
   60% {
     opacity: 1;
-    top: 22%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%) scale(1);
   }
   80% {
     opacity: 1;
-    top: 22%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%) scale(0.7);
   }
   100% {
     opacity: 1;
-    top: 22%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%) scale(1);
   }
@@ -296,7 +296,7 @@ li {
 .main4 .text1 {
   position: absolute;
   display: none;
-  width: 42%;
+  width: 53%;
   -webkit-animation: titleText1 1s linear;
   animation-fill-mode: forwards;
 }
@@ -304,31 +304,31 @@ li {
   0% {
     opacity: 0;
     left: 0;
-    top: 35%;
+    top: 38%;
   }
   60% {
     opacity: 1;
     left: 50%;
-    top: 35%;
+    top: 38%;
     transform: translate(-50%, -50%) scale(1);
   }
   80% {
     opacity: 1;
     left: 50%;
-    top: 35%;
+    top: 38%;
     transform: translate(-50%, -50%) scale(0.7);
   }
   100% {
     opacity: 1;
     left: 50%;
-    top: 35%;
+    top: 38%;
     transform: translate(-50%, -50%) scale(1);
   }
 }
 .main4 .text3 {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 56%;
   transform: translate(-50%, -50%);
   display: none;
   width: 50%;
@@ -338,26 +338,19 @@ li {
 @keyframes titleText3 {
   0% {
     opacity: 0;
-    top: 50%;
+    top: 56%;
     left: 50%;
   }
   100% {
     opacity: 1;
   }
 }
-.main4 .line {
-  position: absolute;
-  top: 62%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-}
 .main4 .time {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 65%;
+  width: 40%;
   -webkit-animation: timeTime 1s linear;
   animation-fill-mode: forwards;
 }
@@ -368,17 +361,17 @@ li {
   }
   60% {
     opacity: 1;
-    bottom: 24%;
+    bottom: 28%;
     transform: translateX(-50%) scale(1);
   }
   80% {
     opacity: 1;
-    bottom: 24%;
+    bottom: 28%;
     transform: translateX(-50%) scale(0.7);
   }
   100% {
     opacity: 1;
-    bottom: 24%;
+    bottom: 28%;
     transform: translateX(-50%) scale(1);
   }
 }
@@ -387,7 +380,7 @@ li {
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 65%;
+  width: 60%;
   -webkit-animation: timeAddress 1s linear;
   animation-fill-mode: forwards;
 }
@@ -398,17 +391,17 @@ li {
   }
   60% {
     opacity: 1;
-    bottom: 21%;
+    bottom: 23%;
     transform: translateX(-50%) scale(1);
   }
   80% {
     opacity: 1;
-    bottom: 21%;
+    bottom: 23%;
     transform: translateX(-50%) scale(0.7);
   }
   100% {
     opacity: 1;
-    bottom: 21%;
+    bottom: 23%;
     transform: translateX(-50%) scale(1);
   }
 }
@@ -417,7 +410,7 @@ li {
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 65%;
+  width: 35%;
   -webkit-animation: timePassword 1s linear;
   animation-fill-mode: forwards;
 }

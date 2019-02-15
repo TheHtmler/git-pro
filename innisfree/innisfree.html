@@ -77,9 +77,8 @@
         <div class="main4">
           <img src="./imgs/bg3.jpg" alt="" class="bg3">
           <img src="./imgs/logo3.png" alt="" class="logo3">
-          <img src="./imgs/text1.png" alt="" class="text1">
+          <img src="./imgs/text1.jpg" alt="" class="text1">
           <img src="./imgs/text3.png" alt="" class="text3">
-          <img src="./imgs/line.png" alt="" class="line">
           <img src="./imgs/time.png" alt="" class="time">
           <img src="./imgs/address.png" alt="" class="address">
           <img src="./imgs/password.png" alt="" class="password">
@@ -121,7 +120,7 @@
             $('.questions-bg, .main-content3 img, .main-content3 .btns').hide(0)
           }
           if(liIndex == 5){
-            $('.logo3, .text1, .text3, .line, .address, .time, .password ').hide(0);
+            $('.logo3, .text1, .text3, .address, .time, .password ').hide(0);
           }
         },
         onSlideChangeEnd: function(mySwiper){
@@ -186,9 +185,6 @@
             },1500)
             setTimeout(function(){
                 $('.text3').fadeIn(500);
-            },3000)
-            setTimeout(function(){
-                $('.line').fadeIn(500);
             },3000)
             setTimeout(function(){
                 $('.time').fadeIn(500);
