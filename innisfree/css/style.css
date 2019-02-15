@@ -100,26 +100,26 @@ li {
 }
 @keyframes letterWra {
   0% {
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
   }
   60% {
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
   80% {
     opacity: 1;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.5);
   }
   100% {
     opacity: 1;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
   }
