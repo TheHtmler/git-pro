@@ -11,6 +11,7 @@
   <div class="swiper-container" id="introduce">
     <ul class="introduce-box-ul swiper-wrapper">
       <li class="bg swiper-slide ">
+        <img src="./imgs/rotating.png" alt="" class="rotating">
         <div class="letter-wrapper">
           <div class="logo-wra"><img src="./imgs/logo1.png" alt="" class="logo1"></div>
           <img src="./imgs/letter.png" alt="" class="letter">
@@ -18,6 +19,7 @@
         <i class="next"></i>
       </li>
       <li class="bg swiper-slide">
+        <img src="./imgs/rotating.png" alt="" class="rotating">
         <img src="./imgs/logo2.png" class="text-logo" />
         <div class="main2">
           <img src="./imgs/letter.png" alt="" class="envolop rotate">
@@ -31,8 +33,10 @@
         </div>
         <i class="next"></i>
       </li>
-      <li class="bg2 swiper-slide">
+      <li class="bg4 swiper-slide">
+        <img src="./imgs/rotating.png" alt="" class="rotating">
         <img src="./imgs/logo2.png" class="text-logo" />
+        <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content1">
           <img src="./imgs/questions1.png" alt="">
           <div class="btns">
@@ -42,8 +46,10 @@
         </div>
         <i class="next"></i>
       </li>
-      <li class="bg2 swiper-slide">
+      <li class="bg4 swiper-slide">
+        <img src="./imgs/rotating.png" alt="" class="rotating">
         <img src="./imgs/logo2.png" class="text-logo" />
+        <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content2">
           <img src="./imgs/questions2.png" alt="">
           <div class="btns">
@@ -53,8 +59,10 @@
         </div>
         <i class="next"></i>
       </li>
-      <li class="bg2 swiper-slide">
+      <li class="bg4 swiper-slide">
+        <img src="./imgs/rotating.png" alt="" class="rotating">
         <img src="./imgs/logo2.png" class="text-logo" />
+        <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content3">
           <img src="./imgs/questions3.png" alt="">
           <div class="btns">
@@ -65,16 +73,17 @@
         <i class="next"></i>
       </li>
       <li class="bg4 swiper-slide">
-         <div class="main4">
-           <!-- <img src="./imgs/bg3.jpg" alt="" class="bg3"> -->
-           <img src="./imgs/logo3.png" alt="" class="logo3">
-           <img src="./imgs/text1.png" alt="" class="text1">
-           <img src="./imgs/text3.png" alt="" class="text3">
-           <img src="./imgs/line.png" alt="" class="line">
-           <img src="./imgs/time.png" alt="" class="time">
-           <img src="./imgs/address.png" alt="" class="address">
-           <img src="./imgs/password.png" alt="" class="password">
-         </div>
+        <img src="./imgs/rotating.png" alt="" class="rotating">
+        <div class="main4">
+          <img src="./imgs/bg3.jpg" alt="" class="bg3">
+          <img src="./imgs/logo3.png" alt="" class="logo3">
+          <img src="./imgs/text1.png" alt="" class="text1">
+          <img src="./imgs/text3.png" alt="" class="text3">
+          <img src="./imgs/line.png" alt="" class="line">
+          <img src="./imgs/time.png" alt="" class="time">
+          <img src="./imgs/address.png" alt="" class="address">
+          <img src="./imgs/password.png" alt="" class="password">
+        </div>
       </li>
     </ul>
     <audio id='audio' src='./mp3.mp3' loop autoplay preload="auto"></audio>
@@ -103,13 +112,13 @@
             clearTimeout(timeTypeText2)
           }
           if(liIndex == 2) {
-            $('.main-content1 img, .main-content1 .btns').hide(0)
+            $('.questions-bg, .main-content1 img, .main-content1 .btns').hide(0)
           }
           if(liIndex == 3) {
-            $('.main-content2 img, .main-content2 .btns').hide(0)
+            $('.questions-bg, .main-content2 img, .main-content2 .btns').hide(0)
           }
           if(liIndex == 4) {
-            $('.main-content3 img, .main-content3 .btns').hide(0)
+            $('.questions-bg, .main-content3 img, .main-content3 .btns').hide(0)
           }
           if(liIndex == 5){
             $('.logo3, .text1, .text3, .line, .address, .time, .password ').hide(0);
@@ -144,22 +153,31 @@
               },5000)
           }
           if(liIndex == 2){
-            $('.main-content1 img').fadeIn(2000);
+            $('.questions-bg').fadeIn(500)
+            setTimeout(function(){
+              $('.main-content1 img').fadeIn(2000);
+            },500)
             setTimeout(function(){
               $('.main-content1 .btns').fadeIn(2000);
-            },500)
+            },1000)
           }
           if(liIndex == 3){
-            $('.main-content2 img').fadeIn(2000);
+            $('.questions-bg').fadeIn(500)
+            setTimeout(function(){
+              $('.main-content2 img').fadeIn(2000);
+            },500)
             setTimeout(function(){
               $('.main-content2 .btns').fadeIn(2000);
-            },500)
+            },1000)
           }
           if(liIndex == 4){
-            $('.main-content3 img').fadeIn(2000);
+            $('.questions-bg').fadeIn(500)
+            setTimeout(function(){
+              $('.main-content3 img').fadeIn(2000);
+            },500)
             setTimeout(function(){
               $('.main-content3 .btns').fadeIn(2000);
-            },500)
+            },1000)
           }
           if(liIndex == 5){
             $('.logo3').fadeIn(500);

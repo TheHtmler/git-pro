@@ -43,16 +43,42 @@ li {
   height: 100% !important;
 }
 .bg {
-  background: url(../imgs/bg.gif) no-repeat center;
+  background: url(../imgs/bg.jpg) no-repeat center;
   background-size: cover;
 }
 .bg2 {
-  background: url(../imgs/bg2.gif) no-repeat center;
+  background: url(../imgs/bg2.jpg) no-repeat center;
   background-size: cover;
 }
 .bg4 {
-  background: url(../imgs/bg4.gif) no-repeat center;
+  background: url(../imgs/bg4.jpg) no-repeat center;
   background-size: cover;
+}
+.rotating {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: rotating 8s linear infinite;
+  opacity: .9;
+}
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+  }
+  75% {
+    -webkit-transform: translate(-50%, -50%) rotate(270deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 .letter-wrapper {
   position: absolute;
@@ -185,9 +211,17 @@ li {
   display: none;
   top: 55%;
 }
-.main3 {
+.questions-bg {
   position: absolute;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  opacity: 0.7;
+}
+.main3 {
+  position: absolute;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
