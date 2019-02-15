@@ -15,7 +15,8 @@ wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
   wx.updateAppMessageShareData({ 
       title: 'innisfree悦诗风吟发光肌密所', // 分享标题
       desc: '肌肤白到自发光的秘密，悦诗风吟#发光肌密所#', // 分享描述
-      link: 'http://mm.diandianboke.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      //link: 'http://mm.diandianboke.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      link: window.location.href.split('#')[0],
       imgUrl: 'http://mm.diandianboke.com:8000/logo.jpg', // 分享图标
       success: function () {
         // 设置成功
@@ -25,7 +26,8 @@ wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
   wx.updateTimelineShareData({
     title: 'innisfree悦诗风吟发光肌密所', // 分享标题
       desc: '肌肤白到自发光的秘密，悦诗风吟#发光肌密所#', // 分享描述
-      link: 'http://mm.diandianboke.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      //link: 'http://mm.diandianboke.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      link: window.location.href.split('#')[0],
       imgUrl: 'http://mm.diandianboke.com:8000/logo.jpg', // 分享图标
       success: function () {
         // 设置成功
@@ -38,8 +40,9 @@ function getShare(){
    $.ajax({
      url: 'http://mm.diandianboke.com:8000/wechat/share/signature',
      data: {
-       "app_id": 'wxba7f7c2f25ed9cc8',
-       "url": "mm.diandianboke.com"
+       "app_id": "wxba7f7c2f25ed9cc8",
+      //  "url": "mm.diandianboke.com"
+      "url": window.location.href.split('#')[0]
      },
      type: 'POST',
      dataType: 'json',

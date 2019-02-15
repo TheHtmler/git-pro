@@ -1,6 +1,7 @@
 
 //----------页面初始化------------
 var audio = document.getElementById('audio');
+
 if(sessionStorage.bgmusic=='pause'){
     playBgMusic(false);
 }else{
@@ -15,13 +16,13 @@ if(sessionStorage.bgmusic=='pause'){
             }, false);
         }
         audioAutoPlay();
-        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-        function audioAutoPlay() {
-            playBgMusic(true);
-            document.removeEventListener('touchstart',audioAutoPlay);
-        }
-        document.addEventListener('touchstart', audioAutoPlay);
     });
+    //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+    function audioAutoPlay() {
+        playBgMusic(true);
+        document.removeEventListener('touchstart',audioAutoPlay);
+    }
+    document.addEventListener('touchstart', audioAutoPlay);
 }
 //----------处理页面激活------------
 var hiddenProperty = 'hidden' in document ? 'hidden' : 'webkitHidden' in document ? 'webkitHidden' : 'mozHidden' in document ? 'mozHidden' : null;
