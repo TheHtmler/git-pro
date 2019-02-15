@@ -84,6 +84,7 @@ li {
   }
 }
 .letter {
+  position: absolute;
   display: none;
   width: 70%;
   -webkit-animation: letterWra 1s linear;
@@ -91,22 +92,28 @@ li {
 }
 @keyframes letterWra {
   0% {
-    margin-top: 0;
+    top: 0;
+    left: 50%;
+    transform: translate(0, -50%);
     opacity: 0;
   }
   60% {
-    margin-top: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
   80% {
-    margin-top: 20%;
     opacity: 1;
-    transform: scale(0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
   }
   100% {
-    margin-top: 20%;
     opacity: 1;
-    transform: scale(1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 .text-logo {
