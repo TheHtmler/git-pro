@@ -297,7 +297,7 @@ li {
 .main4 .text1 {
   position: absolute;
   display: none;
-  width: 53%;
+  width: 68%;
   -webkit-animation: titleText1 1s linear;
   animation-fill-mode: forwards;
 }
