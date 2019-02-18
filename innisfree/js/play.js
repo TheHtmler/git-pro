@@ -1,4 +1,3 @@
-
 //----------页面初始化------------
 var audio = document.getElementById('audio');
 

@@ -1,8 +1,11 @@
 $(function(){
-  $('.logo-wra').fadeIn(1000);
+  $('.logo1').fadeIn(1000);
   setTimeout(function(){
-    $('.letter').fadeIn(500);
+      $('.zzy1').fadeIn(500);
   },1000)
+  setTimeout(function(){
+      $('.index-text').fadeIn(500);
+  },2500)
   $('.main3 .btns div').click(function(){
     $(this).addClass('active').siblings().removeClass('active')
     swiper.slideNext(function(){}, 800);

@@ -91,11 +91,8 @@ li{
     height: 100%;
 }
 
-.logo-wra{
-  display: none;
-}
-
 .logo1{
+  display: none;
   width: 95px;
   -webkit-animation: firstLogo 1s linear;
   animation-fill-mode: forwards;
@@ -124,41 +121,97 @@ li{
   }
 }
 
-
-.letter{
+.zzy1, .zzy2{
   position: absolute;
+  top: 0;
+  right: 0;
   display: none;
-  width: 70%;
-  -webkit-animation: letterWra 1s linear;
+}
+.zzy1{
+  -webkit-animation: zzy1 1s linear;
   animation-fill-mode: forwards;
 }
-
-@keyframes letterWra {
+@keyframes zzy1 {
   0% {
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     opacity: 0;
-  }
-  60%{
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
   }
   100%{
     opacity: 1;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
   }
 }
+
+
+.index-text{
+  position: absolute;
+  left: 10%;
+  display: none;
+  width: 50%;
+  -webkit-animation: indexText 1s linear;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes indexText {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  60%{
+    top: 54%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  80% {
+    top: 54%;
+    opacity: 1;
+    transform: translateY(-50%) scale(0.7);
+  }
+  100%{
+    top: 54%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+.text4{
+  position: absolute;
+  left: 10%;
+  display: none;
+  width: 50%;
+  -webkit-animation: titleText4 1s linear;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes titleText4 {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  60%{
+    top: 43%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  80% {
+    top: 43%;
+    opacity: 1;
+    transform: translateY(-50%) scale(0.7);
+  }
+  100%{
+    top: 43%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.signature{
+  position: absolute;
+  bottom: 18%;
+  left: 20%;
+  display: none;
+  width: 44%;
+}
+
 
 .text-logo{
   position: absolute;

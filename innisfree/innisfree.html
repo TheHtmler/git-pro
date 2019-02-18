@@ -12,10 +12,9 @@
     <ul class="introduce-box-ul swiper-wrapper">
       <li class="bg swiper-slide ">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <div class="letter-wrapper">
-          <div class="logo-wra"><img src="./imgs/logo1.png" alt="" class="logo1"></div>
-          <img src="./imgs/letter.png" alt="" class="letter">
-        </div>
+        <img src="./imgs/logo1.png" alt="" class="logo1">
+        <img src="./imgs/zzy1.png" alt="" class="zzy1">
+        <img src="./imgs/index-text.png" alt="" class="index-text">
         <i class="next"></i>
       </li>
       <li class="bg swiper-slide">
@@ -72,6 +71,14 @@
         </div>
         <i class="next"></i>
       </li>
+      <li class="bg swiper-slide ">
+        <img src="./imgs/rotating.png" alt="" class="rotating">
+        <img src="./imgs/logo1.png" alt="" class="logo1">
+        <img src="./imgs/zzy2.png" alt="" class="zzy2">
+        <img src="./imgs/text4.png" alt="" class="text4">
+        <img src="./imgs/signature.png" alt="" class="signature">
+        <i class="next"></i>
+      </li>
       <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
         <div class="main4">
@@ -101,7 +108,7 @@
         onSlideChangeStart: function(mySwiper) {
           var liIndex = mySwiper.activeIndex
           if(liIndex == 0){
-            $('.logo-wra, .letter').hide(0);
+            $('.logo1, .zzy1, .index-text').hide(0);
           }
           if(liIndex == 1) {
             $('.main2 .envolop').removeClass('rotated').addClass('rotate')
@@ -120,16 +127,22 @@
             $('.questions-bg, .main-content3 img, .main-content3 .btns').hide(0)
           }
           if(liIndex == 5){
+            $('.logo1, .zzy2, .text4, .signature').hide(0);
+          }
+          if(liIndex == 6){
             $('.logo3, .text1, .text3, .address, .time, .password ').hide(0);
           }
         },
         onSlideChangeEnd: function(mySwiper){
           var liIndex = mySwiper.activeIndex;
           if(liIndex == 0){
-            $('.logo-wra').fadeIn(500);
+            $('.logo1').fadeIn(500);
             setTimeout(function(){
-                $('.letter').fadeIn(500);
-            },1500)
+                $('.zzy1').fadeIn(5000);
+            },1000)
+            setTimeout(function(){
+                $('.index-text').fadeIn(500);
+            },1800)
           }
           if(liIndex == 1) {
               $('.main2 .envolop').removeClass('rotate').addClass('rotated');
@@ -152,6 +165,7 @@
               },5000)
           }
           if(liIndex == 2){
+            mySwiper.noSwiping = true;
             $('.questions-bg').fadeIn(500)
             setTimeout(function(){
               $('.main-content1 img').fadeIn(2000);
@@ -161,6 +175,7 @@
             },1000)
           }
           if(liIndex == 3){
+            mySwiper.noSwiping = true;
             $('.questions-bg').fadeIn(500)
             setTimeout(function(){
               $('.main-content2 img').fadeIn(2000);
@@ -170,6 +185,7 @@
             },1000)
           }
           if(liIndex == 4){
+            mySwiper.noSwiping = true;
             $('.questions-bg').fadeIn(500)
             setTimeout(function(){
               $('.main-content3 img').fadeIn(2000);
@@ -179,6 +195,18 @@
             },1000)
           }
           if(liIndex == 5){
+            $('.logo1').fadeIn(500);
+            setTimeout(function(){
+                $('.zzy2').fadeIn(2000);
+            },1000)
+            setTimeout(function(){
+                $('.text4').fadeIn(500);
+            },2500)
+            setTimeout(function(){
+                $('.signature').fadeIn(2000);
+            },3500)
+          }
+          if(liIndex == 6){
             $('.logo3').fadeIn(500);
             setTimeout(function(){
                 $('.text1').fadeIn(500);
