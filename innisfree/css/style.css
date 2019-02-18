@@ -149,17 +149,17 @@ li {
     opacity: 0;
   }
   60% {
-    top: 54%;
+    top: 58%;
     opacity: 1;
     transform: translateY(-50%) scale(1);
   }
   80% {
-    top: 54%;
+    top: 58%;
     opacity: 1;
     transform: translateY(-50%) scale(0.7);
   }
   100% {
-    top: 54%;
+    top: 58%;
     opacity: 1;
     transform: translateY(-50%) scale(1);
   }
@@ -178,17 +178,17 @@ li {
     opacity: 0;
   }
   60% {
-    top: 43%;
+    top: 45%;
     opacity: 1;
     transform: translateY(-50%) scale(1);
   }
   80% {
-    top: 43%;
+    top: 45%;
     opacity: 1;
     transform: translateY(-50%) scale(0.7);
   }
   100% {
-    top: 43%;
+    top: 45%;
     opacity: 1;
     transform: translateY(-50%) scale(1);
   }
