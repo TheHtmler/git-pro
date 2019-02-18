@@ -8,6 +8,7 @@ $(function(){
   },2500)
   $('.main3 .btns div').click(function(){
     $(this).addClass('active').siblings().removeClass('active')
+    swiper.unlockSwipeToNext();
     swiper.slideNext(function(){}, 800);
   })
 })

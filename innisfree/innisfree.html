@@ -32,7 +32,7 @@
         </div>
         <i class="next"></i>
       </li>
-      <li class="bg4 swiper-slide swiper-no-swiping">
+      <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
         <img src="./imgs/logo2.png" class="text-logo" />
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
@@ -45,7 +45,7 @@
         </div>
         <i class="next"></i>
       </li>
-      <li class="bg4 swiper-slide swiper-no-swiping">
+      <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
         <img src="./imgs/logo2.png" class="text-logo" />
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
@@ -58,7 +58,7 @@
         </div>
         <i class="next"></i>
       </li>
-      <li class="bg4 swiper-slide swiper-no-swiping">
+      <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
         <img src="./imgs/logo2.png" class="text-logo" />
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
@@ -105,7 +105,7 @@
   var timeTypeText1,timeTypeText2;
   var swiper = new Swiper('.swiper-container', {
         direction: 'vertical',
-        noSwiping : true,
+        // onlyExternal : true,
         onSlideChangeStart: function(mySwiper) {
           var liIndex = mySwiper.activeIndex
           if(liIndex == 0){
@@ -166,6 +166,7 @@
               },5000)
           }
           if(liIndex == 2){
+            mySwiper.lockSwipeToNext();
             $('.questions-bg').fadeIn(500)
             setTimeout(function(){
               $('.main-content1 img').fadeIn(2000);
@@ -175,6 +176,7 @@
             },1000)
           }
           if(liIndex == 3){
+            mySwiper.lockSwipeToNext();
             $('.questions-bg').fadeIn(500)
             setTimeout(function(){
               $('.main-content2 img').fadeIn(2000);
@@ -184,6 +186,7 @@
             },1000)
           }
           if(liIndex == 4){
+            mySwiper.lockSwipeToNext();
             $('.questions-bg').fadeIn(500)
             setTimeout(function(){
               $('.main-content3 img').fadeIn(2000);
