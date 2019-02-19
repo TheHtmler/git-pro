@@ -19,7 +19,7 @@
       </li>
       <li class="bg swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo2.png" class="text-logo" />
+        <img src="./imgs/logo1.png" alt="" class="logo1">
         <div class="main2">
           <img src="./imgs/letter.png" alt="" class="envolop rotate">
           <div class="text-wrapper">
@@ -34,7 +34,7 @@
       </li>
       <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo2.png" class="text-logo" />
+        <img src="./imgs/logo1.png" alt="" class="logo1">
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content1">
           <img src="./imgs/questions1.png" alt="">
@@ -43,11 +43,10 @@
             <div class="no">B.否</div>
           </div>
         </div>
-        <i class="next"></i>
       </li>
       <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo2.png" class="text-logo" />
+        <img src="./imgs/logo1.png" alt="" class="logo1">
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content2">
           <img src="./imgs/questions2.png" alt="">
@@ -56,11 +55,10 @@
             <div class="no">B.否</div>
           </div>
         </div>
-        <i class="next"></i>
       </li>
       <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo2.png" class="text-logo" />
+        <img src="./imgs/logo1.png" alt="" class="logo1">
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content3">
           <img src="./imgs/questions3.png" alt="">
@@ -69,7 +67,6 @@
             <div class="no">B.否</div>
           </div>
         </div>
-        <i class="next"></i>
       </li>
       <li class="bg swiper-slide ">
         <img src="./imgs/rotating.png" alt="" class="rotating">
@@ -114,18 +111,18 @@
           if(liIndex == 1) {
             $('.main2 .envolop').removeClass('rotated').addClass('rotate')
             $('.text-wrapper').hide(0)
-            $(".main2 .text-top, .main2 .text-bottom").hide(0)
+            $(".logo1, .main2 .text-top, .main2 .text-bottom").hide(0)
             clearTimeout(timeTypeText1)
             clearTimeout(timeTypeText2)
           }
           if(liIndex == 2) {
-            $('.questions-bg, .main-content1 img, .main-content1 .btns').hide(0)
+            $('.logo1, .questions-bg, .main-content1 img, .main-content1 .btns').hide(0)
           }
           if(liIndex == 3) {
-            $('.questions-bg, .main-content2 img, .main-content2 .btns').hide(0)
+            $('.logo1, .questions-bg, .main-content2 img, .main-content2 .btns').hide(0)
           }
           if(liIndex == 4) {
-            $('.questions-bg, .main-content3 img, .main-content3 .btns').hide(0)
+            $('.logo1, .questions-bg, .main-content3 img, .main-content3 .btns').hide(0)
           }
           if(liIndex == 5){
             $('.logo1, .zzy2, .text4, .signature').hide(0);
@@ -146,16 +143,19 @@
             },1800)
           }
           if(liIndex == 1) {
-              $('.main2 .envolop').removeClass('rotate').addClass('rotated');
+              $('.logo1').fadeIn(500);
+              setTimeout(function(){
+                $('.main2 .envolop').removeClass('rotate').addClass('rotated');
+              },800)
               setTimeout(function(){
                 $('.text-wrapper').fadeIn(500);
-              },100)
+              },900)
               timeTypeText1 = setTimeout(function(){
                 $(".main2 .text-top").html(
                   `亲爱的<br/>`+
                   `收到这封信是不是有一点小惊讶?`
                 ).show().typewriter(150);
-              },1500)
+              },2500)
               timeTypeText2 = setTimeout(function(){
                 $(".main2 .text-bottom").html(
                   `其实，<br/>`+
@@ -163,37 +163,46 @@
                   `发现你身边有一些危害在悄悄潜伏着<br/>`+
                   `... ... `
                 ).show().typewriter(150);
-              },5000)
+              },5600)
           }
           if(liIndex == 2){
             mySwiper.lockSwipeToNext();
-            $('.questions-bg').fadeIn(500)
+            $('.logo1').fadeIn(500);
+            setTimeout(function(){
+              $('.questions-bg').fadeIn(500)
+            },1000)
             setTimeout(function(){
               $('.main-content1 img').fadeIn(2000);
-            },500)
+            },1500)
             setTimeout(function(){
               $('.main-content1 .btns').fadeIn(2000);
-            },1000)
+            },2500)
           }
           if(liIndex == 3){
             mySwiper.lockSwipeToNext();
-            $('.questions-bg').fadeIn(500)
+            $('.logo1').fadeIn(500);
+            setTimeout(function(){
+              $('.questions-bg').fadeIn(500)
+            },1000)
             setTimeout(function(){
               $('.main-content2 img').fadeIn(2000);
-            },500)
+            },1500)
             setTimeout(function(){
               $('.main-content2 .btns').fadeIn(2000);
-            },1000)
+            },2500)
           }
           if(liIndex == 4){
             mySwiper.lockSwipeToNext();
-            $('.questions-bg').fadeIn(500)
+            $('.logo1').fadeIn(500);
+            setTimeout(function(){
+              $('.questions-bg').fadeIn(500)
+            },1000)
             setTimeout(function(){
               $('.main-content3 img').fadeIn(2000);
-            },500)
+            },1500)
             setTimeout(function(){
               $('.main-content3 .btns').fadeIn(2000);
-            },1000)
+            },2500)
           }
           if(liIndex == 5){
             $('.logo1').fadeIn(500);
