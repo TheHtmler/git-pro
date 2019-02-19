@@ -153,23 +153,19 @@ li{
 
 @keyframes indexText {
   0% {
-    top: 0;
     opacity: 0;
   }
   60%{
-    top: 58%;
     opacity: 1;
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
   80% {
-    top: 58%;
     opacity: 1;
-    transform: translateY(-50%) scale(0.7);
+    transform: scale(0.7);
   }
   100%{
-    top: 58%;
     opacity: 1;
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
 }
 .text4{
@@ -184,23 +180,19 @@ li{
 
 @keyframes titleText4 {
   0% {
-    top: 0;
     opacity: 0;
   }
   60%{
-    top: 45%;
     opacity: 1;
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
   80% {
-    top: 45%;
     opacity: 1;
-    transform: translateY(-50%) scale(0.7);
+    transform: scale(0.7);
   }
   100%{
-    top: 45%;
     opacity: 1;
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
 }
 
@@ -243,6 +235,7 @@ li{
   }
   
   .text-wrapper{
+    line-height: 22px;
     width: 90%;
     height: 50%;
     display: none;
@@ -271,7 +264,7 @@ li{
       transform: translateX(-50%);
       width: 65%;
       color: #8b3931;
-      font-size: 12px;
+      font-size: 13px;
     }
 
     .text-top{
@@ -460,7 +453,7 @@ li{
     left: 50%;
     transform: translateX(-50%);
     display: none;
-    width: 40%;
+    width: 60%;
     -webkit-animation: timeTime 1s linear;
     animation-fill-mode: forwards;
   }
@@ -471,80 +464,80 @@ li{
     }
     60%{
       opacity: 1;
-      bottom: 37%;
+      bottom: 30%;
       transform: translateX(-50%) scale(1);
     }
     80%{
       opacity: 1;
-      bottom: 37%;
+      bottom: 30%;
       transform: translateX(-50%) scale(0.7);
     }
     100% {
       opacity: 1;
-      bottom: 37%;
+      bottom: 30%;
       transform: translateX(-50%) scale(1);
     }
   }
-  .address{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    width: 60%;
-    -webkit-animation: timeAddress 1s linear;
-    animation-fill-mode: forwards;
-  }
-  @keyframes timeAddress {
-    0% {
-      opacity: 0;
-      bottom: 0;
-    }
-    60%{
-      opacity: 1;
-      bottom: 32%;
-      transform: translateX(-50%) scale(1);
-    }
-    80%{
-      opacity: 1;
-      bottom: 32%;
-      transform: translateX(-50%) scale(0.7);
-    }
-    100% {
-      opacity: 1;
-      bottom: 32%;
-      transform: translateX(-50%) scale(1);
-    }
-  }
-  .password{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    width: 35%;
-    -webkit-animation: timePassword 1s linear;
-    animation-fill-mode: forwards;
-  }
-  @keyframes timePassword {
-    0% {
-      opacity: 0;
-      bottom: 0;
-    }
-    60%{
-      opacity: 1;
-      bottom: 27%;
-      transform: translateX(-50%) scale(1);
-    }
-    80%{
-      opacity: 1;
-      bottom: 27%;
-      transform: translateX(-50%) scale(0.7);
-    }
-    100% {
-      opacity: 1;
-      bottom: 27%;
-      transform: translateX(-50%) scale(1);
-    }
-  }
+  // .address{
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   display: none;
+  //   width: 60%;
+  //   -webkit-animation: timeAddress 1s linear;
+  //   animation-fill-mode: forwards;
+  // }
+  // @keyframes timeAddress {
+  //   0% {
+  //     opacity: 0;
+  //     bottom: 0;
+  //   }
+  //   60%{
+  //     opacity: 1;
+  //     bottom: 32%;
+  //     transform: translateX(-50%) scale(1);
+  //   }
+  //   80%{
+  //     opacity: 1;
+  //     bottom: 32%;
+  //     transform: translateX(-50%) scale(0.7);
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //     bottom: 32%;
+  //     transform: translateX(-50%) scale(1);
+  //   }
+  // }
+  // .password{
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   display: none;
+  //   width: 35%;
+  //   -webkit-animation: timePassword 1s linear;
+  //   animation-fill-mode: forwards;
+  // }
+  // @keyframes timePassword {
+  //   0% {
+  //     opacity: 0;
+  //     bottom: 0;
+  //   }
+  //   60%{
+  //     opacity: 1;
+  //     bottom: 27%;
+  //     transform: translateX(-50%) scale(1);
+  //   }
+  //   80%{
+  //     opacity: 1;
+  //     bottom: 27%;
+  //     transform: translateX(-50%) scale(0.7);
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //     bottom: 27%;
+  //     transform: translateX(-50%) scale(1);
+  //   }
+  // }
 }
 
 #status{
@@ -579,6 +572,68 @@ li{
       transform: scale(1); 
     }
 }
+
+// .loading-war{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   z-index: 99;
+
+//   &.loading-war-hide{
+//     -webkit-animation: loadingWarHide 1s linear;
+//     animation-fill-mode: forwards;
+//   }
+//   @keyframes loadingWarHide {
+//     0% {
+//       opacity: 1;
+//     }
+//     100% {
+//       opacity: 0;
+//     }
+//   }
+
+//   .loading-bg{
+//     width: 100%;
+//   }
+//   .loading-logo1{
+//     z-index: 100;
+//     position: absolute;
+//     top: 20%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 95px;
+//     -webkit-animation: loadingLogo1 1s linear;
+//     animation-fill-mode: forwards;
+//   }
+//   @keyframes loadingLogo1 {
+//     0% {
+//       opacity: 0;
+//     }
+//     100% {
+//       opacity: 1;
+//     }
+//   }
+//   .loading-icon{
+//     display: none;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     z-index: 100;
+//     width: 15%;
+//     -webkit-animation: loadingIcon 1s linear;
+//     animation-fill-mode: forwards;
+//   }
+//   @keyframes loadingIcon {
+//     0% {
+//       opacity: 0;
+//     }
+//     100% {
+//       opacity: 1;
+//     }
+//   }
+// }
 
 
 // @media screen and (max-width: 320px) {

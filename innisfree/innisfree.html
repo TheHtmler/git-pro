@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <!-- <div class="loading-war">
+    <img src="./imgs/bg2.jpg" alt="" class="loading-bg">
+    <img src="./imgs/logo1.png" alt="" class="loading-logo1">
+    <img src="./imgs/loading.png" alt="" class="loading-icon">
+  </div> -->
   <div class="swiper-container" id="introduce">
     <ul class="introduce-box-ul swiper-wrapper">
       <li class="bg swiper-slide ">
@@ -73,7 +78,6 @@
         <img src="./imgs/logo1.png" alt="" class="logo1">
         <img src="./imgs/zzy2.png" alt="" class="zzy2">
         <img src="./imgs/text4.png" alt="" class="text4">
-        <img src="./imgs/signature.png" alt="" class="signature">
         <i class="next"></i>
       </li>
       <li class="bg4 swiper-slide">
@@ -85,8 +89,6 @@
           <!-- <img src="./imgs/text3.png" alt="" class="text3"> -->
           <img src="./imgs/line.png" alt="" class="line">
           <img src="./imgs/time.png" alt="" class="time">
-          <img src="./imgs/address.png" alt="" class="address">
-          <img src="./imgs/password.png" alt="" class="password">
         </div>
       </li>
     </ul>
@@ -100,6 +102,18 @@
 <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js "></script>
 <script src="js/play.js"></script>
 <script>
+
+  // $('.loading-logo1').fadeIn(2000);
+  // setTimeout(function(){
+  //   $('.loading-icon').fadeIn(5000)
+  // },800);
+  // setTimeout(function(){
+  //     $('.loading-war').addClass('loading-war-hide');
+  // },2500);
+  // setTimeout(function(){
+  //     $('.loading-war').hide();
+  // },2600);
+
   var timeTypeText1,timeTypeText2;
   var swiper = new Swiper('.swiper-container', {
         direction: 'vertical',
@@ -128,7 +142,7 @@
             $('.logo1, .zzy2, .text4, .signature').hide(0);
           }
           if(liIndex == 6){
-            $('.logo3, .text1, .line, .address, .time, .password ').hide(0);
+            $('.logo3, .text1, .line, .time ').hide(0);
           }
         },
         onSlideChangeEnd: function(mySwiper){
@@ -140,7 +154,7 @@
             },1000)
             setTimeout(function(){
                 $('.index-text').fadeIn(500);
-            },1800)
+            },2000)
           }
           if(liIndex == 1) {
               $('.logo1').fadeIn(500);
@@ -227,12 +241,6 @@
             setTimeout(function(){
                 $('.time').fadeIn(500);
             },3000)
-            setTimeout(function(){
-                $('.address').fadeIn(500);
-            },4000)
-            setTimeout(function(){
-                $('.password').fadeIn(500);
-            },5000)
           }
         }
       });
