@@ -71,3 +71,15 @@ function getShare(){
    })
 }
 
+var isClick = true;
+$("button").on("click",function(){
+  if(isClick) {
+    isClick = false;
+    //事件
+    console.log($(this).attr("data-val"));
+    //定时器
+    setTimeout(function() {
+      isClick = true;
+    }, 1000);//一秒内不能重复点击
+  }
+});

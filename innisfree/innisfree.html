@@ -18,14 +18,14 @@
     <ul class="introduce-box-ul swiper-wrapper">
       <li class="bg swiper-slide ">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo1.png" alt="" class="logo1">
+        <img src="./imgs/logo1.png" alt="" class="logo1 logo_1">
         <img src="./imgs/zzy1.png" alt="" class="zzy1">
         <img src="./imgs/index-text.png" alt="" class="index-text">
         <i class="next"></i>
       </li>
       <li class="bg swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo1.png" alt="" class="logo1 logo2">
+        <img src="./imgs/logo1.png" alt="" class="logo1 logo_2">
         <div class="main2">
           <img src="./imgs/letter.png" alt="" class="envolop rotate">
           <div class="text-wrapper">
@@ -40,7 +40,7 @@
       </li>
       <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo1.png" alt="" class="logo1 logo3">
+        <img src="./imgs/logo1.png" alt="" class="logo1 logo_3">
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content1">
           <img src="./imgs/questions1.png" alt="">
@@ -52,7 +52,7 @@
       </li>
       <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo1.png" alt="" class="logo1 logo4">
+        <img src="./imgs/logo1.png" alt="" class="logo1 logo_4">
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content2">
           <img src="./imgs/questions2.png" alt="">
@@ -64,7 +64,7 @@
       </li>
       <li class="bg4 swiper-slide">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo1.png" alt="" class="logo1 logo5">
+        <img src="./imgs/logo1.png" alt="" class="logo1 logo_5">
         <img src="./imgs/questions-bg.jpg" alt="" class="questions-bg">
         <div class="main3 main-content3">
           <img src="./imgs/questions3.png" alt="">
@@ -76,7 +76,7 @@
       </li>
       <li class="bg swiper-slide ">
         <img src="./imgs/rotating.png" alt="" class="rotating">
-        <img src="./imgs/logo1.png" alt="" class="logo1 logo6">
+        <img src="./imgs/logo1.png" alt="" class="logo1 logo_6">
         <img src="./imgs/zzy2.png" alt="" class="zzy2">
         <img src="./imgs/text4.png" alt="" class="text4">
         <i class="next"></i>
@@ -121,26 +121,26 @@
         onSlideChangeStart: function(mySwiper) {
           var liIndex = mySwiper.activeIndex
           if(liIndex == 0){
-            $('.logo1, .zzy1, .index-text').hide(0);
+            $('.logo_1, .zzy1, .index-text').hide(0);
           }
           if(liIndex == 1) {
             $('.main2 .envolop').removeClass('rotated').addClass('rotate')
             $('.text-wrapper').hide(0)
-            $(".logo1, .main2 .text-top, .main2 .text-bottom").hide(0)
+            $(".logo_2, .main2 .text-top, .main2 .text-bottom").hide(0)
             clearTimeout(timeTypeText1)
             clearTimeout(timeTypeText2)
           }
           if(liIndex == 2) {
-            $('.logo1, .questions-bg, .main-content1 img, .main-content1 .btns').hide(0)
+            $('.logo_3, .questions-bg, .main-content1 img, .main-content1 .btns').hide(0)
           }
           if(liIndex == 3) {
-            $('.logo1, .questions-bg, .main-content2 img, .main-content2 .btns').hide(0)
+            $('.logo_4, .questions-bg, .main-content2 img, .main-content2 .btns').hide(0)
           }
           if(liIndex == 4) {
-            $('.logo1, .questions-bg, .main-content3 img, .main-content3 .btns').hide(0)
+            $('.logo_5, .questions-bg, .main-content3 img, .main-content3 .btns').hide(0)
           }
           if(liIndex == 5){
-            $('.logo1, .zzy2, .text4, .signature').hide(0);
+            $('.logo_6, .zzy2, .text4, .signature').hide(0);
           }
           if(liIndex == 6){
             $('.logo3, .text1, .line, .time ').hide(0);
@@ -149,7 +149,7 @@
         onSlideChangeEnd: function(mySwiper){
           var liIndex = mySwiper.activeIndex;
           if(liIndex == 0){
-            $('.logo1').fadeIn(2000);
+            $('.logo_1').fadeIn(2000);
             setTimeout(function(){
                 $('.zzy1').fadeIn(5000);
             },1000)
@@ -159,7 +159,7 @@
             swiper.unlockSwipeToNext();
           }
           if(liIndex == 1) {
-              $('.logo2').fadeIn(2000);
+              $('.logo_2').fadeIn(2000);
               setTimeout(function(){
                 $('.main2 .envolop').removeClass('rotate').addClass('rotated');
               },800)
@@ -184,7 +184,7 @@
           }
           if(liIndex == 2){
             mySwiper.lockSwipeToNext();
-            $('.logo3').fadeIn(2000);
+            $('.logo_3').fadeIn(2000);
             setTimeout(function(){
               $('.questions-bg').fadeIn(500)
             },1000)
@@ -197,7 +197,7 @@
           }
           if(liIndex == 3){
             mySwiper.lockSwipeToNext();
-            $('.logo4').fadeIn(500);
+            $('.logo_4').fadeIn(500);
             setTimeout(function(){
               $('.questions-bg').fadeIn(500)
             },1000)
@@ -210,7 +210,7 @@
           }
           if(liIndex == 4){
             mySwiper.lockSwipeToNext();
-            $('.logo5').fadeIn(2000);
+            $('.logo_5').fadeIn(2000);
             setTimeout(function(){
               $('.questions-bg').fadeIn(500)
             },1000)
@@ -222,7 +222,7 @@
             },2500)
           }
           if(liIndex == 5){
-            $('.logo6').fadeIn(2000);
+            $('.logo_6').fadeIn(2000);
             setTimeout(function(){
                 $('.zzy2').fadeIn(2000);
             },1000)
