@@ -349,8 +349,8 @@ li {
   transform: translateX(-50%);
   display: none;
   width: 60%;
-  -webkit-animation: proRotate ease-in-out 500ms alternate none 1;
-  animation: proRotate  ease-in-out 500ms alternate none 1;
+  -webkit-animation: proRotate ease-in-out 500ms alternate none 10;
+  animation: proRotate  ease-in-out 500ms alternate none 10;
   -webkit-backface-visibility: hidden; 
   -webkit-transform-style: preserve-3d;
 }
