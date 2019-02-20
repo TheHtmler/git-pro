@@ -304,8 +304,6 @@ li {
   width: 42%;
   -webkit-animation: lastLogo 1s linear;
   animation-fill-mode: forwards;
-  -webkit-backface-visibility: hidden; 
-  -webkit-transform-style: preserve-3d;
 }
 @keyframes lastLogo {
   0% {
@@ -324,8 +322,6 @@ li {
   width: 70%;
   -webkit-animation: titleText1 1s linear;
   animation-fill-mode: forwards;
-  -webkit-backface-visibility: hidden; 
-  -webkit-transform-style: preserve-3d;
 }
 @keyframes titleText1 {
   0% {

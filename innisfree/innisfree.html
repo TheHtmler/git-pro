@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>innisfree</title>
   <link rel="stylesheet" href="./css/style.css">
@@ -155,6 +156,7 @@
             setTimeout(function(){
                 $('.index-text').fadeIn(500);
             },2000)
+            swiper.unlockSwipeToNext();
           }
           if(liIndex == 1) {
               $('.logo1').fadeIn(2000);
@@ -178,6 +180,7 @@
                   `... ... `
                 ).show().typewriter(150);
               },5600)
+              swiper.unlockSwipeToNext();
           }
           if(liIndex == 2){
             mySwiper.lockSwipeToNext();
