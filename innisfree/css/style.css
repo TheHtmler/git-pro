@@ -345,8 +345,8 @@ li {
   transform: translateX(-50%);
   display: none;
   width: 60%;
-  -webkit-animation: proRotate ease-in-out 500ms forwads 1;
-  animation: proRotate  ease-in-out 500ms forwads 1;
+  -webkit-animation: proRotate ease-in-out 500ms forwads none 1;
+  animation: proRotate  ease-in-out 500ms forwads none 1;
 }
 @-webkit-keyframes proRotate { 
   0%{-webkit-transform:translateX(-50%) perspective(400px) rotateX(180deg);} 
