@@ -1,5 +1,5 @@
 $(function(){
-  $('.logo1').fadeIn(1000);
+  $('.logo_1').fadeIn(1000);
   setTimeout(function(){
       $('.zzy1').fadeIn(500);
   },1000)
