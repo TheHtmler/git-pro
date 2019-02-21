@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #282447;
+}
+.wrapper .header {
+  display: flex;
+  padding: 20px;
+}
+.wrapper .header .logo {
+  width: 30%;
+  line-height: 0;
+}
+.wrapper .header .logo img {
+  width: 100%;
+}
+.wrapper .header .title {
+  flex: 1 1 auto;
+  align-self: flex-end;
+  padding-left: 30px;
+  color: #fff;
+  font-size: 50px;
+}
+.wrapper .main {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #0d7870;
+}
+.wrapper .main .section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 10px;
+  background-color: #1dbfb3;
+}
+.wrapper .main .section .head {
+  display: flex;
+  height: 20%;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+.wrapper .main .section .head > div {
+  flex: 1;
+}
+.wrapper .main .section .main-section {
+  height: 50%;
+}
+.wrapper .main .section .footer {
+  height: 30%;
+}
