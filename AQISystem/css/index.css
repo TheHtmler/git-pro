@@ -44,6 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
   margin: 0 10px;
   background-color: #1dbfb3;
 }
@@ -60,6 +61,55 @@ body {
 }
 .wrapper .main .section .main-section {
   height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  /*整体旋转*/
+  animation: moveover 3s linear infinite;
+}
+@keyframes moveover {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.wrapper .main .section .main-section .box1 {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  border-radius: 50px 0 0 50px;
+  /* 起始最深颜色为 #999，过渡到中间颜色为 #d0cfcf */
+  background: linear-gradient(#86fcfb, rgba(29, 191, 179, 0));
+  background-color: #1dbfb3;
+  z-index: 2;
+}
+.wrapper .main .section .main-section .box3 {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  background-color: #1dbfb3;
+  z-index: 2;
+}
+.wrapper .main .section .main-section span {
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #86fcfb;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #defffa;
+  -moz-box-shadow: 0 0 8px #defffa;
+  -webkit-box-shadow: 0 0 8px #defffa;
 }
 .wrapper .main .section .footer {
   height: 30%;
