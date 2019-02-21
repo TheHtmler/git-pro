@@ -38,7 +38,7 @@ body {
   flex: 1;
   justify-content: space-around;
   padding: 20px;
-  background-color: #0d7870;
+  background: #1f3261;
 }
 .wrapper .main .section {
   display: flex;
@@ -46,7 +46,7 @@ body {
   flex: 1;
   position: relative;
   margin: 0 10px;
-  background-color: #1dbfb3;
+  background: #415a9d;
 }
 .wrapper .main .section .head {
   display: flex;
@@ -64,6 +64,12 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .main .section .main-section .rotation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100px;
   height: 100px;
   /*整体旋转*/
@@ -77,27 +83,27 @@ body {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-.wrapper .main .section .main-section .box1 {
+.wrapper .main .section .main-section .rotation .box1 {
   position: absolute;
   width: 50px;
   height: 100px;
   border-radius: 50px 0 0 50px;
   /* 起始最深颜色为 #999，过渡到中间颜色为 #d0cfcf */
   background: linear-gradient(#86fcfb, rgba(29, 191, 179, 0));
-  background-color: #1dbfb3;
+  background-color: #415a9d;
   z-index: 2;
 }
-.wrapper .main .section .main-section .box3 {
+.wrapper .main .section .main-section .rotation .box3 {
   position: absolute;
   width: 92px;
   height: 92px;
   top: 4px;
   left: 4px;
   border-radius: 50%;
-  background-color: #1dbfb3;
+  background-color: #415a9d;
   z-index: 2;
 }
-.wrapper .main .section .main-section span {
+.wrapper .main .section .main-section .rotation span {
   position: absolute;
   top: -7px;
   left: 50%;
@@ -110,6 +116,14 @@ body {
   box-shadow: 0 0 8px #defffa;
   -moz-box-shadow: 0 0 8px #defffa;
   -webkit-box-shadow: 0 0 8px #defffa;
+}
+.wrapper .main .section .main-section .temperature {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #86fcfb;
 }
 .wrapper .main .section .footer {
   height: 30%;
