@@ -38,14 +38,14 @@ body {
   flex: 1;
   justify-content: space-around;
   padding: 20px;
-  background-color: #0d7870;
+  background-color: #1c2b8c;
 }
 .wrapper .main .section {
   display: flex;
   flex-direction: column;
   flex: 1;
   margin: 0 10px;
-  background-color: #1dbfb3;
+  background-color: #4861ca;
 }
 .wrapper .main .section .head {
   display: flex;
