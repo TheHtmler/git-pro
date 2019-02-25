@@ -44,7 +44,6 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  position: relative;
   margin: 0 10px;
   background: #415a9d;
 }
@@ -61,10 +60,7 @@ body {
 }
 .wrapper .main .section .main-section {
   height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
 }
 .wrapper .main .section .main-section .rotation {
   position: absolute;
@@ -126,5 +122,16 @@ body {
   color: #86fcfb;
 }
 .wrapper .main .section .footer {
+  display: flex;
   height: 30%;
+  color: #fff;
+  text-align: center;
+}
+.wrapper .main .section .footer > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .main .section .footer > div > div {
+  flex: 1;
 }
