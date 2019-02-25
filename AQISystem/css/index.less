@@ -7,6 +7,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    font-family: '微软雅黑', '黑体', Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -14,13 +15,15 @@ html, body {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: #282447;
+    background-color: #029489;
 
     .header {
         display: flex;
         padding: 20px;
+        align-items: baseline;
 
         .logo {
+            padding-left: 40px;
             width: 30%;
             line-height: 0;
 
@@ -31,7 +34,6 @@ html, body {
 
         .title {
             flex: 1 1 auto;
-            align-self: flex-end;
             padding-left: 30px;
             color: #fff;
             font-size: 50px;
@@ -43,16 +45,16 @@ html, body {
         flex: 1;
         justify-content: space-around;
         padding: 20px;
-        // background-color: #0d7870;
-        background: #1f3261;
+        padding-top: 0;
+        background: #029489;
 
         .section {
             display: flex;
             flex-direction: column;
             flex: 1;
             margin: 0 10px;
-            // background-color: #1dbfb3;
-            background: #415a9d;
+            background: #1dbfb0;
+            border-radius: 10px;
 
             .head {
                 display: flex;
@@ -60,7 +62,7 @@ html, body {
                 padding: 10px;
                 text-align: center;
                 color: #fff;
-                font-size: 30px;
+                font-size: 50px;
 
                 &>div {
                     flex: 1;
@@ -68,69 +70,112 @@ html, body {
             }
 
             .main-section {
+                display: flex;
                 height: 50%;
-                position: relative;
-                
-                .rotation{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    width:100px;
-                    height:100px;
-                    /*整体旋转*/
-                    animation:moveover 3s linear infinite;
-                
-                
-                    @keyframes moveover {
-                        0%   {transform:translate(-50%, -50%) rotate(0deg);}
-                        100% {transform:translate(-50%, -50%) rotate(360deg);}
+                color: #fff;
+                // position: relative;
+
+                .pm-value {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+
+                    .value {
+                        flex: 1;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: center;
+                        font-size: 120px;
                     }
 
-                    .box1{
-                        position:absolute;
-                        width: 50px;
-                        height: 100px;
-                        border-radius:50px 0 0 50px;
-                        /* 起始最深颜色为 #999，过渡到中间颜色为 #d0cfcf */
-                        background: linear-gradient(rgba(134, 252, 251, 1), rgba(29, 191, 179, 0));
-                        background-color: #415a9d;
-                        z-index:2;
+                    .unit {
+                        padding-right: 20%;
+                        height: 80px;
+                        text-align: right;
                     }
                     
-                    .box3{
-                        position:absolute;
-                        width:92px;
-                        height:92px;
-                        top:4px;
-                        left:4px;
-                        border-radius:50%;
-                        background-color: #415a9d;
-                        z-index:2;
-                    }
+                }
 
-                    span{
+                .pm-status {
+                    position: relative;
+                    width: 20%;
+
+                    .level {
+                        display: flex;
+                        justify-content: center;
                         position: absolute;
-                        top: -7px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        display: block;
-                        width: 10px;
-                        height: 10px;
-                        background: #86fcfb;
-                        border-radius: 50%;
-                        box-shadow:0 0 8px #defffa;
-                        -moz-box-shadow:0 0 8px #defffa;
-                        -webkit-box-shadow:0 0 8px #defffa;
+                        left: 0;
+                        padding: 4px 0;
+                        bottom: 80px;
+                        width: 40px;
+                        text-align: center;
+                        background: #f00;
+                        writing-mode: lr-tb;
+                        border-radius: 5px;
+                        font-size: 24px;
                     }
                 }
-                .temperature{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-size: 30px;
-                    color: #86fcfb;
-                }
+                
+                // .rotation{
+                //     position: absolute;
+                //     top: 50%;
+                //     left: 50%;
+                //     width:100px;
+                //     height:100px;
+                //     /*整体旋转*/
+                //     animation:moveover 3s linear infinite;
+                
+                
+                //     @keyframes moveover {
+                //         0%   {transform:translate(-50%, -50%) rotate(0deg);}
+                //         100% {transform:translate(-50%, -50%) rotate(360deg);}
+                //     }
+
+                //     .box1{
+                //         position:absolute;
+                //         width: 50px;
+                //         height: 100px;
+                //         border-radius:50px 0 0 50px;
+                //         /* 起始最深颜色为 #999，过渡到中间颜色为 #d0cfcf */
+                //         background: linear-gradient(rgba(134, 252, 251, 1), rgba(29, 191, 179, 0));
+                //         background-color: #415a9d;
+                //         z-index:2;
+                //     }
+                    
+                //     .box3{
+                //         position:absolute;
+                //         width:92px;
+                //         height:92px;
+                //         top:4px;
+                //         left:4px;
+                //         border-radius:50%;
+                //         background-color: #415a9d;
+                //         z-index:2;
+                //     }
+
+                //     span{
+                //         position: absolute;
+                //         top: -7px;
+                //         left: 50%;
+                //         transform: translateX(-50%);
+                //         display: block;
+                //         width: 10px;
+                //         height: 10px;
+                //         background: #86fcfb;
+                //         border-radius: 50%;
+                //         box-shadow:0 0 8px #defffa;
+                //         -moz-box-shadow:0 0 8px #defffa;
+                //         -webkit-box-shadow:0 0 8px #defffa;
+                //     }
+                // }
+                // .temperature{
+                //     position: absolute;
+                //     top: 50%;
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                //     font-size: 30px;
+                //     color: #86fcfb;
+                // }
             }
 
             .footer {
@@ -145,7 +190,15 @@ html, body {
                     flex-direction: column;
 
                     &>div {
+                        display: flex;
                         flex: 1;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 24px;
+
+                        &.value {
+                            font-size: 30px;
+                        }
                     }
                 }
             }

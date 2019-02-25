@@ -7,19 +7,22 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: '微软雅黑', '黑体', Arial, Helvetica, sans-serif;
 }
 .wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: #282447;
+  background-color: #029489;
 }
 .wrapper .header {
   display: flex;
   padding: 20px;
+  align-items: baseline;
 }
 .wrapper .header .logo {
+  padding-left: 40px;
   width: 30%;
   line-height: 0;
 }
@@ -28,7 +31,6 @@ body {
 }
 .wrapper .header .title {
   flex: 1 1 auto;
-  align-self: flex-end;
   padding-left: 30px;
   color: #fff;
   font-size: 50px;
@@ -38,14 +40,16 @@ body {
   flex: 1;
   justify-content: space-around;
   padding: 20px;
-  background: #1f3261;
+  padding-top: 0;
+  background: #029489;
 }
 .wrapper .main .section {
   display: flex;
   flex-direction: column;
   flex: 1;
   margin: 0 10px;
-  background: #415a9d;
+  background: #1dbfb0;
+  border-radius: 10px;
 }
 .wrapper .main .section .head {
   display: flex;
@@ -53,73 +57,50 @@ body {
   padding: 10px;
   text-align: center;
   color: #fff;
-  font-size: 30px;
+  font-size: 50px;
 }
 .wrapper .main .section .head > div {
   flex: 1;
 }
 .wrapper .main .section .main-section {
+  display: flex;
   height: 50%;
+  color: #fff;
+}
+.wrapper .main .section .main-section .pm-value {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.wrapper .main .section .main-section .pm-value .value {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 120px;
+}
+.wrapper .main .section .main-section .pm-value .unit {
+  padding-right: 20%;
+  height: 80px;
+  text-align: right;
+}
+.wrapper .main .section .main-section .pm-status {
   position: relative;
+  width: 20%;
 }
-.wrapper .main .section .main-section .rotation {
+.wrapper .main .section .main-section .pm-status .level {
+  display: flex;
+  justify-content: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  /*整体旋转*/
-  animation: moveover 3s linear infinite;
-}
-@keyframes moveover {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-.wrapper .main .section .main-section .rotation .box1 {
-  position: absolute;
-  width: 50px;
-  height: 100px;
-  border-radius: 50px 0 0 50px;
-  /* 起始最深颜色为 #999，过渡到中间颜色为 #d0cfcf */
-  background: linear-gradient(#86fcfb, rgba(29, 191, 179, 0));
-  background-color: #415a9d;
-  z-index: 2;
-}
-.wrapper .main .section .main-section .rotation .box3 {
-  position: absolute;
-  width: 92px;
-  height: 92px;
-  top: 4px;
-  left: 4px;
-  border-radius: 50%;
-  background-color: #415a9d;
-  z-index: 2;
-}
-.wrapper .main .section .main-section .rotation span {
-  position: absolute;
-  top: -7px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 10px;
-  height: 10px;
-  background: #86fcfb;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #defffa;
-  -moz-box-shadow: 0 0 8px #defffa;
-  -webkit-box-shadow: 0 0 8px #defffa;
-}
-.wrapper .main .section .main-section .temperature {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 30px;
-  color: #86fcfb;
+  left: 0;
+  padding: 4px 0;
+  bottom: 80px;
+  width: 40px;
+  text-align: center;
+  background: #f00;
+  writing-mode: lr-tb;
+  border-radius: 5px;
+  font-size: 24px;
 }
 .wrapper .main .section .footer {
   display: flex;
@@ -133,5 +114,12 @@ body {
   flex-direction: column;
 }
 .wrapper .main .section .footer > div > div {
+  display: flex;
   flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.wrapper .main .section .footer > div > div.value {
+  font-size: 30px;
 }
