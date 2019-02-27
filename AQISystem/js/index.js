@@ -1,4 +1,7 @@
 $(function() {
+    var outDoor = '室外'
+    var inDoor = '室内'
+
     function renderLevel(index) {
         var pmValue = $('.pm-value .value').eq(index).text()
         if (pmValue >= 0 && pmValue <= 50) {
@@ -21,6 +24,50 @@ $(function() {
             $('.pm-status .level').eq(index).css('background', '#6f1774')
         }
     }
-    renderLevel(0)
-    renderLevel(1)
+
+    function getData(id, loc) {
+        $.ajax({
+            url: 'http://47.104.3.171/ProcessDataCloud/customer/getAirQualityData?sensorid=' + id,
+            method: 'GET',
+            type: 'json',
+            success: function(res) {
+                var resData = JSON.parse(res).data[0]
+                if (loc == '室外') {
+                    $('.pm-value .value').eq(0).text(Math.round(resData.pm25))
+                    $('.temp .value').eq(0).text(Math.round(resData.temperature) + '℃')
+                    $('.hd .value').eq(0).text(Math.round(resData.humidity) + '%')
+                    renderLevel(0)
+                } else if (loc == '室内') {
+                    $('.pm-value .value').eq(1).text(Math.round(resData.pm25))
+                    $('.temp .value').eq(1).text(Math.round(resData.temperature) + '℃')
+                    $('.hd .value').eq(1).text(Math.round(resData.humidity) + '%')
+                    renderLevel(1)
+                }
+            },
+            error: function(err) {
+                console.log('数据获取失败!');
+            }
+        })
+    }
+
+    function getWeather(addr) {
+        $.ajax({
+            url: 'https://bird.ioliu.cn/weather?city=' + addr,
+            method: 'GET',
+            type: 'json',
+            success: function(res) {
+                var resData = JSON.parse(res).result
+                console.log(resData)
+                $('.air-condition .value').eq(0).text(resData.weather)
+                $('.air-condition .value').eq(1).text(resData.weather)
+            },
+            error: function(err) {
+                console.log('数据获取失败!');
+            }
+        })
+    }
+
+    getData(121, outDoor)
+    getData(123, inDoor)
+    getWeather('北京')
 })
