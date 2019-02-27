@@ -35,6 +35,13 @@ body {
   color: #fff;
   font-size: 50px;
 }
+.wrapper .header .time {
+  flex: 1;
+  align-self: flex-end;
+  text-align: right;
+  margin-right: 20px;
+  color: #fff;
+}
 .wrapper .main {
   display: flex;
   flex: 1;

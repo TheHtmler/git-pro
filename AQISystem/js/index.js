@@ -1,6 +1,7 @@
 $(function() {
     var outDoor = '室外'
     var inDoor = '室内'
+    var t
 
     function renderLevel(index) {
         var pmValue = $('.pm-value .value').eq(index).text()
@@ -31,6 +32,9 @@ $(function() {
             method: 'GET',
             type: 'json',
             success: function(res) {
+                updateDate = new Date()
+                updateDate = updateDate.getFullYear() + '-' + (updateDate.getMonth() + 1 < 10 ? '0' + (updateDate.getMonth() + 1) : updateDate.getMonth() + 1) + '-' + (updateDate.getDate() < 10 ? '0' + updateDate.getDate() : updateDate.getDate()) + ' ' + (updateDate.getHours() < 10 ? '0' + updateDate.getHours() : updateDate.getHours()) + ':' + (updateDate.getMinutes() < 10 ? '0' + updateDate.getMinutes() : updateDate.getMinutes())
+                $('.time').html("更新时间: " + updateDate)
                 var resData = JSON.parse(res).data[0]
                 if (loc == '室外') {
                     $('.pm-value .value').eq(0).text(Math.round(resData.pm25))
@@ -66,8 +70,13 @@ $(function() {
             }
         })
     }
-
     getData(121, outDoor)
     getData(123, inDoor)
     getWeather('北京')
+        // clearInterval(t)
+    t = setInterval(function() {
+        getData(121, outDoor)
+        getData(123, inDoor)
+        getWeather('北京')
+    }, 30 * 60 * 1000)
 })
