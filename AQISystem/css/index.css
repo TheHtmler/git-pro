@@ -123,3 +123,10 @@ body {
 .wrapper .main .section .footer > div > div.value {
   font-size: 30px;
 }
+.wrapper .main .section .footer > div > div.value .val {
+  font-size: 40px;
+}
+.wrapper .main .section .footer > div > div.value .unit {
+  margin-bottom: -16px;
+  font-size: 16px;
+}

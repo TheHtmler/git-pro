@@ -41,6 +41,7 @@ $(function() {
                     $('.pm-value .value').eq(1).text(Math.round(resData.pm25))
                     $('.temp .value').eq(1).text(Math.round(resData.temperature) + '℃')
                     $('.hd .value').eq(1).text(Math.round(resData.humidity) + '%')
+                    $('.air-condition .value .val').text(resData.co2)
                     renderLevel(1)
                 }
             },
@@ -59,7 +60,6 @@ $(function() {
                 var resData = JSON.parse(res).result
                 console.log(resData)
                 $('.air-condition .value').eq(0).text(resData.weather)
-                $('.air-condition .value').eq(1).text(resData.weather)
             },
             error: function(err) {
                 console.log('数据获取失败!');
