@@ -33,7 +33,33 @@ $(function() {
             type: 'json',
             success: function(res) {
                 updateDate = new Date()
-                updateDate = updateDate.getFullYear() + '-' + (updateDate.getMonth() + 1 < 10 ? '0' + (updateDate.getMonth() + 1) : updateDate.getMonth() + 1) + '-' + (updateDate.getDate() < 10 ? '0' + updateDate.getDate() : updateDate.getDate()) + ' ' + (updateDate.getHours() < 10 ? '0' + updateDate.getHours() : updateDate.getHours()) + ':' + (updateDate.getMinutes() < 10 ? '0' + updateDate.getMinutes() : updateDate.getMinutes())
+                var weekDay = updateDate.getDay()
+                var weekText = ''
+                switch (weekDay) {
+                    case 0:
+                        weekText = "星期日";
+                        break;
+                    case 1:
+                        weekText = "星期一";
+                        break;
+                    case 2:
+                        weekText = "星期二";
+                        break;
+                    case 3:
+                        weekText = "星期三";
+                        break;
+                    case 4:
+                        weekText = "星期四";
+                        break;
+                    case 5:
+                        weekText = "星期五";
+                        break;
+                    case 6:
+                        weekText = "星期六";
+                        break;
+                }
+
+                updateDate = updateDate.getFullYear() + '-' + (updateDate.getMonth() + 1 < 10 ? '0' + (updateDate.getMonth() + 1) : updateDate.getMonth() + 1) + '-' + (updateDate.getDate() < 10 ? '0' + updateDate.getDate() : updateDate.getDate()) + ' ' + (updateDate.getHours() < 10 ? '0' + updateDate.getHours() : updateDate.getHours()) + ':' + (updateDate.getMinutes() < 10 ? '0' + updateDate.getMinutes() : updateDate.getMinutes() + ' ' + weekText)
                 $('.time').html("更新时间: " + updateDate)
                 var resData = JSON.parse(res).data[0]
                 if (loc == '室外') {
