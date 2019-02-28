@@ -19,7 +19,6 @@ body {
 .wrapper .header {
   display: flex;
   padding: 20px;
-  align-items: baseline;
 }
 .wrapper .header .logo {
   padding-left: 40px;
@@ -31,6 +30,8 @@ body {
 }
 .wrapper .header .title {
   flex: 1 1 auto;
+  align-self: flex-end;
+  line-height: 32px;
   padding-left: 30px;
   color: #fff;
   font-size: 50px;
